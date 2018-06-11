@@ -10,7 +10,6 @@
 @import url(blocks.css);
 
 /*Import CSS Plugins*/
-@import url(plugins/style-switcher.css);
 
 * {
 	border-radius: 0;
@@ -28,7 +27,99 @@ body.header-fixed-space {
 body.header-fixed-space-v2 {
 	padding-top: 135px;
 }
+.more {
+    float: right;
+    margin: -60px 10px 0 0;
+}
+#plugin-list-header {
+    margin: 40px 0;
+    text-align: center;
+}
+#plugin-list-header:after {
+    clear: both;
+}
+#plugin-list-header:after, #plugin-list-header:before {
+    content: "";
+    display: table;
+}
+#plugin-list-title {
+    font-family: Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 1;
+    /*float: left;*/
+}
+.plugin.on {
+    display: block;
+}
+#plugin-list {
+    margin: 40px -20px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column
+}
 
+@media screen and (min-width:480px) {
+    #plugin-list {
+        -webkit-box-orient: horizontal;
+        -moz-box-orient: horizontal;
+        -webkit-box-lines: multiple;
+        -moz-box-lines: multiple;
+        -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap
+    }
+}
+.plugin {
+    display: none;
+    padding: 20px
+}
+
+@media screen and (min-width:480px) {
+    .plugin {
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        box-flex: 1;
+        -webkit-flex: 0 0 50%;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%
+    }
+}
+
+@media screen and (min-width:769px) {
+    .plugin {
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        box-flex: 1;
+        -webkit-flex: 0 0 33.333333333333336%;
+        -ms-flex: 0 0 33.333333333333336%;
+        flex: 0 0 33.333333333333336%
+    }
+}
+
+.plugin.on {
+    display: block
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+.plugin-name {
+    font-family: Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    color: #0e83cd;
+    font-size: 20px;
+    text-decoration: none;
+    line-height: 1;
+}
 .navbar-brand span {
     color: #3d2c25;
     font-weight: bold;
